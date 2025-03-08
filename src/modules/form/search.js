@@ -20,7 +20,13 @@ form.onsubmit = async function(event) {
         return
     }
 
-    const {appointmentHistory, name, clientSince, id, loyaltyCard} = await fetchClient(search)
+    const client = await fetchClient(search)
+
+    if (!client) {
+        return
+    }
+    
+    const {appointmentHistory, name, clientSince, id, loyaltyCard} = client
     const userInfo = {
         name, 
         clientSince,

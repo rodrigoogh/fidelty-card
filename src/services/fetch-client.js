@@ -7,6 +7,10 @@ export async function fetchClient(id) {
         }
         const response = await fetch(`${apiConfig.baseURL}/clients/${id}`);
 
+        if (response.status === 404) {
+            throw new Error('ID not found.');
+        }
+
         return await response.json();
     } catch (error) {
         console.error(error);
