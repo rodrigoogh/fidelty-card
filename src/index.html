@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cartão Fidelidade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="flex flex-column gap-4">
+      <div class="search flex flex-column gap-2 content-center items-center">
+        <img src="../assets/Logo.png" class="logo" alt="Member Club" />
+        <form action="#" id="form-search" method="get">
+          <div class="input-wrapper">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="ID do cartão"
+            />
+            <button type="submit" class="submit">
+              <i class="ph ph-arrow-elbow-down-left"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="flex flex-row gap-2">
+        <section class="user flex flex-column gap-1">
+          <div class="card gap-1 profile">
+            <div class="card-image">
+              <img src="https://i.pravatar.cc/" alt="Profile Image" />
+            </div>
+            <div class="card-content">
+              <p class="user-name title-sm">Natália Miranda</p>
+              <span class="user-info text-xs">Cliente desde <span></span></span>
+            </div>
+          </div>
+          <div class="card m-w-300 history">
+            <header class="history-header">
+              <p class="subtitle-sm">histórico</p>
+              <p class="text-xs cuts-count"><span>0</span> cortes</p>
+            </header>
+            <ul>
+              <li>
+                <div class="history-detail">
+                  <p class="subtitle-sm">29/04/2024</p>
+                  <p class="text-xs">18:30</p>
+                </div>
+                <div class="icon-container">
+                  <i class="ph ph-seal-check"></i>
+                </div>
+              </li>
+              <li>
+                <div class="history-detail">
+                  <p class="subtitle-sm">29/04/2024</p>
+                  <p class="text-xs">18:30</p>
+                </div>
+                <div class="icon-container">
+                  <i class="ph ph-seal-check"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="transactions flex flex-column gap-1">
+          <div class="card fidelty-card flex-column gap-2">
+            <div
+              class="fidelty-card-info flex flex-row items-start content-between"
+            >
+              <div class="fidelty-card-text flex flex-column gap-.25">
+                <p class="subtitle-sm">CARTÃO FIDELIDADE</p>
+                <p class="text-sm">
+                  Ao fazer cortes de cabelo, o décimo sai de graça!
+                </p>
+              </div>
+              <div class="fidelty-card-id">
+                <p class="subtitle-md">ID: <span></span></p>
+              </div>
+            </div>
+            <div class="fidelty-card-stamps">
+              <ul class="stamps">
+                <li class="stamp"></li>
+                <li class="stamp"></li>
+                <li class="stamp"></li>
+                <li class="stamp"></li>
+                <li class="stamp"></li>
+                <li class="stamp"></li>
+                <li class="stamp"></li>
+                <li class="stamp"></li>
+                <li class="stamp"></li>
+                <li class="stamp"></li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="progress-card card flex-row content-center items-center gap-2"
+          >
+            <div class="progress flex flex-column gap-.75 flex-1">
+              <div class="progress-title">
+                <span class="title-md" id="remaining-cuts">3</span
+                ><span class="text-md"> cortes restantes</span>
+              </div>
+              <div class="progress-bar flex flex-row gap-.75">
+                <progress id="progress-bar" max="10" value="7"></progress
+                ><label for="progress-bar" class="text-xs"
+                  ><span id="current-amount" class="text-xs">7</span> de
+                  <span id="max-cuts" class="text-xs">10</span></label
+                >
+              </div>
+            </div>
+            <div class="progress-gift">
+              <img src="../assets/PinGift.png" alt="Gift" />
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  </body>
+</html>

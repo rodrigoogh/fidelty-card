@@ -1,0 +1,43 @@
+section.user {
+    width: 320px;
+}
+
+.profile {
+    align-items: center;
+}
+
+.card-image {
+    width: 56px;
+    height: 56px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-profile);
+    z-index: 1;
+}
+
+.card-image img {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: calc(100% - 3.5px);
+    height: calc(100% - 3.5px);
+    object-fit: cover;
+    margin: 1.5px;
+    border: 2px solid var(--base-gray-100);
+    box-sizing: border-box;
+}
+
+.card-image, .card-image img {
+    border-radius: 10px;
+}
+
+.user-name {
+    margin-block-start: 0;
+    margin-block-end: .25rem;
+}

@@ -1,0 +1,21 @@
+.submit {
+    width: 40px;
+    height: 40px;
+    background-color: var(--base-gray-700);
+    border-radius: 8px;
+    border: 1px solid var(--base-gray-700);
+
+    &:disabled {
+        opacity: 0.6;
+    }
+
+    &:hover {
+        background-color: var(--base-gray-600);
+    }
+
+    i {
+        color: var(--base-white);
+        font-size: 20px;
+        vertical-align: middle;
+    }
+}
